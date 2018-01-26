@@ -54,10 +54,12 @@ cat /etc/*release
 read -p "These should only be used on a fresh and clean install of ubuntu 16. You ready, lets go. "
   
   
+apt update
+apt upgrade
 
 
 freshBuild (
-read -p "Is this a fresh install of Ubuntu 17(y/n)?" choice
+read -p "Is this a fresh install of Ubuntu 16(y/n)?" choice
 case "$choice" in 
   y|Y ) ;;
   n|N ) echo "Please use a fresh build, exiting now"
@@ -79,7 +81,7 @@ echo "checking for proper partitioning"
 #
 
 echo "Giving you my favorite tools, vim, htop," >> NOTES
-sudo apt -y install vim htop 
+sudo apt -y install vim htop curl wget 
 
 var/log/installer 
 
