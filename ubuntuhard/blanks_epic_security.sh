@@ -8,13 +8,6 @@
 
 
 
-
-
-Blank's
-epic security scripts
-
-
-
 echo "                     _                                      "
 echo " _____ _         _  | |               _                     "
 echo "| __  | |___ ___| |_|_/___    ___ ___|_|___                 "
@@ -47,13 +40,16 @@ echo "                                        "
 #
 #
 
-cat /etc/*release                                       
-                                        
-                                        
+                                      
 					
 read -p "These should only be used on a fresh and clean install of ubuntu 16. You ready, lets go. "
   
-  
+
+
+read -p " "
+
+cat /etc/*release 
+ 
 apt update
 apt upgrade
 
