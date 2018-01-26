@@ -38,13 +38,22 @@ echo "|  |  | . | | |   |  _| | |   _| |_| . |"
 echo "|_____|___|___|_|_|_| |___|  |_____|___|"
 echo "                                        "
                                         
-                                        
-                                        
-                                        
-                                        
-                                        
 
 
+###################################################################
+###								 ##
+##       0.0 check that everything is setup proper like           #
+#
+#
+#
+
+cat /etc/*release                                       
+                                        
+                                        
+					
+read -p "These should only be used on a fresh and clean install of ubuntu 16. You ready, lets go. "
+  
+  
 
 
 freshBuild (
@@ -59,8 +68,15 @@ case "$choice" in
 esac
 )
 
+
+
 echo "checking for proper partitioning"
 
+#
+#
+#
+#
+#
 
 echo "Giving you my favorite tools, vim, htop," >> NOTES
 sudo apt -y install vim htop 
@@ -72,3 +88,22 @@ if [desktop == 1]
 
 sudo -y apt-get install ubuntu-desktop
 fi
+
+
+
+apt upgrade -y
+
+apt -y install git curl vim
+
+
+
+
+echo "installed mad markdownreader">> $notes
+apt install mad
+
+#install brave remove for security
+curl https://s3-us-west-2.amazonaws.com/brave-apt/keys.asc | sudo apt-key add -
+echo "deb [arch=amd64] https://s3-us-west-2.amazonaws.com/brave-apt `lsb_release -sc` main" | sudo tee -a /etc/apt/sources.list.d/brave-`lsb_release -sc`.list
+apt update
+apt install brave
+
