@@ -105,3 +105,33 @@ echo "deb [arch=amd64] https://s3-us-west-2.amazonaws.com/brave-apt `lsb_release
 apt update
 apt install brave
 
+
+######################
+###
+#  CIS Ubuntu bench mark v 1.10
+#
+
+#CIS 1.1.1.1
+echo "install cramfs /bin/true" >> /etc/modprobe.d/SECz.conf 
+rmmod cramfs
+
+#CIS 1.1.1.2
+echo "install freevxfs /bin/true" >> /etc/modprobe.d/SECz.conf
+rmmod freevxfs
+
+#CIS 1.1.1.3
+echo "install jffs2 /bin/true" >> /etc/modprobe.d/SECz.conf
+rmmod jffs2
+
+#CIS 1.1.1.4
+echo "install hfs /bin/true" >> /etc/modprobe.d/SECz.conf
+rmmod hfs
+
+#CIS 1.1.1.5
+echo "install hfsplus /bin/true" >> /etc/modprobe.d/SECz.conf
+rmmod hfsplus
+
+#CIS 1.1.1.6
+
+
+
