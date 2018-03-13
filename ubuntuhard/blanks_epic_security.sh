@@ -131,7 +131,7 @@ rmmod hfs
 echo "install hfsplus /bin/true" >> /etc/modprobe.d/SECz.conf
 rmmod hfsplus
 
-#CIS 1.1.1.6
+#CIS 1.1.1.6 
 
 
 
