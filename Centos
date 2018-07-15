@@ -1,0 +1,7 @@
+#centos yum install list
+vim
+yum-utils
+wget
+
+
+#htop needs repo added
